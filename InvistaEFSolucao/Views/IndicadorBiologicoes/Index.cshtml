@@ -1,0 +1,71 @@
+﻿@model IEnumerable<InvistaEFSolucao.Models.IndicadorBiologico>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Produto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Microorganismo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CorOriginal)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ValorD)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ValorZ)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ValorN)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CorPosterior)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Produto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Microorganismo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CorOriginal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorZ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CorPosterior)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IndicadorBiologicoID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IndicadorBiologicoID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IndicadorBiologicoID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

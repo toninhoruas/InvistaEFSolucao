@@ -1,0 +1,64 @@
+﻿@model InvistaEFSolucao.Models.IndicadorBiologico
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>IndicadorBiologico</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IndicadorBiologicoID" />
+            <div class="form-group">
+                <label asp-for="Produto" class="control-label"></label>
+                <input asp-for="Produto" class="form-control" />
+                <span asp-validation-for="Produto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Microorganismo" class="control-label"></label>
+                <input asp-for="Microorganismo" class="form-control" />
+                <span asp-validation-for="Microorganismo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CorOriginal" class="control-label"></label>
+                <input asp-for="CorOriginal" class="form-control" />
+                <span asp-validation-for="CorOriginal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorD" class="control-label"></label>
+                <input asp-for="ValorD" class="form-control" />
+                <span asp-validation-for="ValorD" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorZ" class="control-label"></label>
+                <input asp-for="ValorZ" class="form-control" />
+                <span asp-validation-for="ValorZ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorN" class="control-label"></label>
+                <input asp-for="ValorN" class="form-control" />
+                <span asp-validation-for="ValorN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CorPosterior" class="control-label"></label>
+                <input asp-for="CorPosterior" class="form-control" />
+                <span asp-validation-for="CorPosterior" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

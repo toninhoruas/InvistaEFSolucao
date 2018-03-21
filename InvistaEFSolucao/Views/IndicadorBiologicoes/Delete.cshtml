@@ -1,0 +1,63 @@
+﻿@model InvistaEFSolucao.Models.IndicadorBiologico
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>IndicadorBiologico</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Produto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Produto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Microorganismo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Microorganismo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CorOriginal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CorOriginal)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorD)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ValorD)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorZ)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ValorZ)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorN)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ValorN)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CorPosterior)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CorPosterior)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IndicadorBiologicoID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

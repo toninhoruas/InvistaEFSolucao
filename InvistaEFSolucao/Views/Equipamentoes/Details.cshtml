@@ -1,0 +1,42 @@
+﻿@model InvistaEFSolucao.Models.Equipamento
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Equipamento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeEquipamento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomeEquipamento)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeFabricante)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomeFabricante)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Modelo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Serie)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Serie)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.EquipamentoID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,60 @@
+﻿@model InvistaEFSolucao.Models.IndicadorBiologico
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>IndicadorBiologico</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Produto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Produto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Microorganismo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Microorganismo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CorOriginal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CorOriginal)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorD)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ValorD)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorZ)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ValorZ)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorN)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ValorN)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CorPosterior)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CorPosterior)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IndicadorBiologicoID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
